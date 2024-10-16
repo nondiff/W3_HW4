@@ -1,0 +1,56 @@
+﻿@model s1114760HW4.Models.Cloth
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Cloth</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.名稱)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.名稱)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.尺寸)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.尺寸)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.顏色)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.顏色)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.現貨)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.現貨)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

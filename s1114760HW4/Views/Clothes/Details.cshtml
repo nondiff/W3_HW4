@@ -1,0 +1,50 @@
+﻿@model s1114760HW4.Models.Cloth
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Cloth</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.名稱)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.名稱)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.尺寸)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.尺寸)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.顏色)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.顏色)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.現貨)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.現貨)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
